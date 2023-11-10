@@ -4,7 +4,7 @@
 
 
 body {
-  background-color: #1F2129;
+  background-color: rgb(15, 15, 15);
   color: white;
 }
 
@@ -30,23 +30,23 @@ body {
 }
 
 
-body{
-  background-color: #1E2029;
+body {
+  background-color: rgb(15, 15, 15);
   @apply text-slate-100 m-8;
 }
 
-.nav--items{
+.nav--items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav--items div:nth-child(1){
+.nav--items div:nth-child(1) {
   font-weight: 600;
   font-size: x-large;
 }
 
-.nav--links{
+.nav--links {
   display: flex;
   justify-content: space-around;
   gap: 20px;
@@ -54,17 +54,18 @@ body{
   font-weight: 500;
   font-size: large;
 }
-.nav--links a{
+
+.nav--links a {
   position: relative;
   padding: 0 10px;
   text-decoration: none;
 }
 
-.nav--links a:hover{
-    color: white;
+.nav--links a:hover {
+  color: white;
 }
 
-.nav--links a::after{
+.nav--links a::after {
   content: '';
   position: absolute;
   background-color: white;
@@ -75,11 +76,11 @@ body{
   transition: 0.3s;
 }
 
-.nav--links a:hover::after{
+.nav--links a:hover::after {
   width: 100%;
 }
 
-.nav--buttons{
+.nav--buttons {
   display: flex;
   gap: 10px;
 }
@@ -94,12 +95,13 @@ body{
 }
 
 .grid-wrapper>div {
-  background: grey;
+  background: rgb(28, 26, 26);
+  background: linear-gradient(117deg, rgba(28, 26, 26, 1) 0%, rgba(34, 33, 33, 1) 90%, rgba(22, 22, 22, 1) 100%);
   text-align: center;
   padding: 20px;
   color: #000;
 }
-
+  /* Card one styles */
 .card1 {
   grid-column: 1/4;
   grid-row: 1/4;
@@ -114,6 +116,72 @@ body{
   right: 40px;
   bottom: 40px;
 }
+
+.center-con {
+  display: flex;
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.round {
+  position: absolute;
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer
+}
+
+#cta{
+  width:100%; top: 3px; left: 3.8px; cursor: pointer; position: absolute;
+}
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; bottom: 0;  margin-left:0px; width: 12px; height: 12px; background-size: contain; top:15px;}
+.segunda{margin-left: 8px;}
+.next {
+background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+0% {opacity: 1; transform: translateX(0px) scale(1);}
+25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.round:hover .arrow{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.round:hover .arrow.primera{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
 
 .card2 {
   grid-column: 4/6;
